@@ -6,16 +6,16 @@ const Footer = () => {
   return (
     <footer className="bg-[#222222] text-white py-12">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <Link to="/" className="text-2xl font-bold font-poppins">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div className="mb-8 md:mb-0">
+            <Link to="/" className="text-2xl font-bold font-poppins gradient-text bg-gradient-to-r from-blue-400 to-blue-600">
               InfraZeo
             </Link>
             <p className="text-gray-400 mt-2 text-sm">Infrastructure Meets Innovation</p>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
-            <div className="flex space-x-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-12">
+            <div className="grid grid-cols-2 gap-x-12 gap-y-3 md:flex md:space-x-8">
               <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
                 About
               </Link>
@@ -35,14 +35,14 @@ const Footer = () => {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors bg-gray-800 p-2 rounded-full hover-lift"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a 
                 href="mailto:contact@infrazeo.com" 
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors bg-gray-800 p-2 rounded-full hover-lift"
                 aria-label="Email"
               >
                 <Mail size={20} />

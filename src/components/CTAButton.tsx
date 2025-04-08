@@ -14,8 +14,12 @@ const CTAButton = ({ text, to, variant = "default", className = "" }: CTAButtonP
     <Link to={to}>
       <Button 
         variant={variant} 
-        className={`${variant === "default" ? "bg-infrazeo-blue hover:bg-blue-600" : ""} 
-        rounded-full shadow-md hover:shadow-lg transition-all ${className}`}
+        className={`
+          ${variant === "default" ? "bg-infrazeo-blue hover:bg-blue-600" : ""} 
+          rounded-full shadow-button hover:shadow-lg transition-all duration-300 
+          transform hover:-translate-y-1 hover:scale-105 
+          ${className}
+        `}
       >
         {text}
       </Button>
