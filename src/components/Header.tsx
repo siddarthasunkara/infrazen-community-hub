@@ -41,7 +41,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="text-white text-2xl font-bold font-poppins flex items-center relative group">
             <span className="absolute -inset-x-4 -inset-y-2 rounded-lg group-hover:bg-white/10 transition-all duration-300 opacity-0 group-hover:opacity-100"></span>
-            <span className="relative transition-transform duration-300 transform group-hover:scale-105">InfraZeo</span>
+            <span className="relative">InfraZeo</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -62,14 +62,8 @@ const Header = () => {
               Contact
             </Link>
             <Link to="/book-demo">
-              <Button 
-                variant="outline" 
-                className="border-white text-white hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-105 hover:-translate-y-1 group ripple-effect"
-              >
-                <span className="relative z-10">Book a Demo</span>
-                <span className="absolute inset-0 w-full h-full">
-                  <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-shimmer"></span>
-                </span>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                Book a Demo
               </Button>
             </Link>
           </nav>
@@ -87,7 +81,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pt-4 pb-4">
-            <div className="flex flex-col space-y-4 slide-right">
+            <div className="flex flex-col space-y-4">
               <Link to="/" className="text-white py-2 px-4 hover:bg-blue-600/20 rounded-lg transition-colors duration-200">
                 Home
               </Link>
