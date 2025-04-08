@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,7 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 211 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.8rem;
   }
 
   .dark {
@@ -74,33 +74,57 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-inter;
   }
 }
 
 @layer components {
   .cta-button {
-    @apply bg-infrazen-blue text-white py-3 px-6 rounded-md font-medium hover:bg-blue-600 transition-colors;
+    @apply bg-infrazeo-blue text-white py-3 px-6 rounded-full font-medium hover:bg-blue-600 transition-colors shadow-md hover:shadow-lg;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-infrazen-black mb-6;
+    @apply text-3xl md:text-4xl font-bold text-infrazeo-black mb-6 font-poppins;
   }
   
   .section-subtitle {
-    @apply text-xl text-infrazen-gray mb-8 max-w-3xl mx-auto;
+    @apply text-xl text-infrazeo-gray mb-8 max-w-3xl mx-auto;
   }
   
   .feature-card {
-    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100;
+    @apply bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:translate-y-[-5px];
   }
   
   .header-link {
-    @apply text-infrazen-black hover:text-infrazen-blue transition-colors duration-200;
+    @apply text-white hover:text-blue-100 transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-all hover:after:w-full;
   }
 
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .animate-fade-in {
+    @apply opacity-0 transition-all duration-700 ease-out;
+  }
+
+  .fade-in-element {
+    @apply translate-y-6 opacity-0 transition duration-700 ease-out;
+  }
+
+  .fade-in-element.appear {
+    @apply translate-y-0 opacity-100;
+  }
+
+  .back-to-top {
+    @apply fixed bottom-6 right-6 bg-infrazeo-blue text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors z-40 opacity-0 invisible;
+  }
+
+  .back-to-top.visible {
+    @apply opacity-100 visible;
   }
 }

@@ -1,17 +1,31 @@
 
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { observeElements } from "@/utils/animations";
 
 const HowItWorksPage = () => {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = observeElements();
+    
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-infrazen-blue text-white py-16">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 font-poppins fade-in-element">
             How It Works
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto fade-in-element">
             Our streamlined implementation process gets your branded community platform up and running with minimal effort on your part.
           </p>
         </div>
@@ -23,34 +37,34 @@ const HowItWorksPage = () => {
           <div className="max-w-4xl mx-auto">
             {/* Step 1 */}
             <div className="mb-24">
-              <div className="flex items-center mb-8">
-                <div className="bg-infrazen-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
+              <div className="flex items-center mb-8 fade-in-element">
+                <div className="bg-infrazeo-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
                   1
                 </div>
-                <h2 className="text-3xl font-bold text-infrazen-black">Developer signs up</h2>
+                <h2 className="text-3xl font-bold text-infrazeo-black font-poppins">Builders sign up → We create branded app + dashboard</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <p className="text-lg text-infrazen-gray mb-6">
+                <div className="fade-in-element">
+                  <p className="text-lg text-infrazeo-gray mb-6">
                     After an initial consultation, we gather your brand requirements, community details, and desired modules. 
                     Our team then creates a white-label digital app customized specifically for your real estate portfolio.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Branding assets collected</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Branding assets collected</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Module configuration tailored to your needs</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Module configuration tailored to your needs</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Community structure mapped digitally</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Community structure mapped digitally</span>
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gray-50 p-8 rounded-lg">
+                <div className="bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
                   <img 
                     src="/placeholder.svg" 
                     alt="Developer Signup Process" 
@@ -62,36 +76,36 @@ const HowItWorksPage = () => {
 
             {/* Step 2 */}
             <div className="mb-24">
-              <div className="flex items-center mb-8">
-                <div className="bg-infrazen-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
+              <div className="flex items-center mb-8 fade-in-element">
+                <div className="bg-infrazeo-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
                   2
                 </div>
-                <h2 className="text-3xl font-bold text-infrazen-black">Admins onboarded</h2>
+                <h2 className="text-3xl font-bold text-infrazeo-black font-poppins">Admins onboarded → Residents added via secure onboarding</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="order-2 md:order-1 bg-gray-50 p-8 rounded-lg">
+                <div className="order-2 md:order-1 bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
                   <img 
                     src="/placeholder.svg" 
                     alt="Admin Onboarding" 
                     className="w-full rounded-lg"
                   />
                 </div>
-                <div className="order-1 md:order-2">
-                  <p className="text-lg text-infrazen-gray mb-6">
+                <div className="order-1 md:order-2 fade-in-element">
+                  <p className="text-lg text-infrazeo-gray mb-6">
                     Our team provides comprehensive training for your staff and management. We set up administrator access with customized permission levels and ensure everyone is comfortable with the platform.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Role-based access configuration</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Role-based access configuration</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Interactive training sessions</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Interactive training sessions</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Comprehensive admin documentation</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Comprehensive admin documentation</span>
                     </li>
                   </ul>
                 </div>
@@ -100,37 +114,37 @@ const HowItWorksPage = () => {
 
             {/* Step 3 */}
             <div>
-              <div className="flex items-center mb-8">
-                <div className="bg-infrazen-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
+              <div className="flex items-center mb-8 fade-in-element">
+                <div className="bg-infrazeo-blue text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
                   3
                 </div>
-                <h2 className="text-3xl font-bold text-infrazen-black">Residents use the app</h2>
+                <h2 className="text-3xl font-bold text-infrazeo-black font-poppins">App handles all community tasks</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <p className="text-lg text-infrazen-gray mb-6">
+                <div className="fade-in-element">
+                  <p className="text-lg text-infrazeo-gray mb-6">
                     Residents download your branded app and create accounts. They can then use all available features including payments, access control, communication tools, and service requests.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Simple self-registration process</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Payments, Gate Pass, SOS</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Digital payments and community access</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Digital payments and community access</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Complaint submission and resolution tracking</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Complaint submission and resolution tracking</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-infrazen-blue font-bold mr-2">•</span>
-                      <span className="text-infrazen-gray">Community announcements and updates</span>
+                      <span className="text-infrazeo-blue font-bold mr-2">•</span>
+                      <span className="text-infrazeo-gray">Community announcements and updates</span>
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gray-50 p-8 rounded-lg">
+                <div className="bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
                   <img 
                     src="/placeholder.svg" 
                     alt="Resident App Usage" 
@@ -141,38 +155,16 @@ const HowItWorksPage = () => {
             </div>
           </div>
 
-          {/* Ongoing Support */}
-          <div className="mt-24 bg-gray-50 p-8 md:p-12 rounded-lg">
-            <h3 className="text-2xl font-bold mb-6 text-infrazen-black">Continuous Support & Development</h3>
-            <p className="text-lg text-infrazen-gray mb-8">
-              Our relationship doesn't end with deployment. InfraZen provides ongoing support, regular updates, and continuous improvement based on your feedback and evolving needs.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-md shadow-sm">
-                <h4 className="font-semibold mb-2 text-infrazen-black">Technical Support</h4>
-                <p className="text-infrazen-gray">Dedicated support team available to resolve any technical issues promptly.</p>
-              </div>
-              <div className="bg-white p-6 rounded-md shadow-sm">
-                <h4 className="font-semibold mb-2 text-infrazen-black">Regular Updates</h4>
-                <p className="text-infrazen-gray">Continuous platform improvements and new feature releases.</p>
-              </div>
-              <div className="bg-white p-6 rounded-md shadow-sm">
-                <h4 className="font-semibold mb-2 text-infrazen-black">Custom Development</h4>
-                <p className="text-infrazen-gray">Ability to request custom features specific to your communities.</p>
-              </div>
-            </div>
-          </div>
-
           {/* CTA Section */}
-          <div className="mt-16 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-infrazen-black">
+          <div className="mt-24 text-center">
+            <h2 className="text-3xl font-bold mb-6 text-infrazeo-black font-poppins fade-in-element">
               Ready to get started?
             </h2>
-            <p className="text-xl text-infrazen-gray mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-infrazeo-gray mb-8 max-w-2xl mx-auto fade-in-element">
               Let's discuss how we can transform your community management with a branded digital solution.
             </p>
-            <Link to="/book-demo">
-              <Button className="bg-infrazen-blue hover:bg-blue-600 px-8 py-6 h-auto text-lg">
+            <Link to="/book-demo" className="fade-in-element inline-block">
+              <Button className="bg-infrazeo-blue hover:bg-blue-600 px-8 py-6 h-auto text-lg rounded-full shadow-md">
                 Book a Demo
               </Button>
             </Link>

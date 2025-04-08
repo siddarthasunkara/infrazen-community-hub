@@ -1,9 +1,10 @@
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { observeElements } from "@/utils/animations";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -15,6 +16,17 @@ const ContactPage = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = observeElements();
+    
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -47,13 +59,13 @@ const ContactPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-infrazen-blue text-white py-16">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 font-poppins fade-in-element">
             Book a Demo or Request a Callback
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Get in touch with our team to learn how InfraZen can transform your community management.
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto fade-in-element">
+            Get in touch with our team to learn how InfraZeo can transform your community management.
           </p>
         </div>
       </section>
@@ -63,17 +75,17 @@ const ContactPage = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-infrazen-black">Contact Us</h2>
-              <p className="text-lg text-infrazen-gray mb-8">
+              <h2 className="text-3xl font-bold mb-6 text-infrazeo-black font-poppins fade-in-element">Contact Us</h2>
+              <p className="text-lg text-infrazeo-gray mb-8 fade-in-element">
                 Fill out the form and our team will get back to you within 24 hours. We're here to answer any questions you have about our platform.
               </p>
 
               <div className="space-y-8 mb-8">
-                <div className="flex items-start">
+                <div className="flex items-start fade-in-element">
                   <div className="bg-blue-100 p-3 rounded-full mr-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-infrazen-blue"
+                      className="h-6 w-6 text-infrazeo-blue"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -87,23 +99,23 @@ const ContactPage = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-1 text-infrazen-black">
+                    <h3 className="text-xl font-semibold mb-1 text-infrazeo-black font-poppins">
                       Email Us
                     </h3>
                     <a
-                      href="mailto:contact@infrazen.com"
-                      className="text-infrazen-blue hover:underline"
+                      href="mailto:contact@infrazeo.com"
+                      className="text-infrazeo-blue hover:underline"
                     >
-                      contact@infrazen.com
+                      contact@infrazeo.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start fade-in-element">
                   <div className="bg-blue-100 p-3 rounded-full mr-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-infrazen-blue"
+                      className="h-6 w-6 text-infrazeo-blue"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -117,23 +129,23 @@ const ContactPage = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-1 text-infrazen-black">
+                    <h3 className="text-xl font-semibold mb-1 text-infrazeo-black font-poppins">
                       Call Us
                     </h3>
                     <a
                       href="tel:+1234567890"
-                      className="text-infrazen-blue hover:underline"
+                      className="text-infrazeo-blue hover:underline"
                     >
                       +1 (234) 567-890
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start fade-in-element">
                   <div className="bg-blue-100 p-3 rounded-full mr-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-infrazen-blue"
+                      className="h-6 w-6 text-infrazeo-blue"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -153,18 +165,18 @@ const ContactPage = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-1 text-infrazen-black">
+                    <h3 className="text-xl font-semibold mb-1 text-infrazeo-black font-poppins">
                       Location
                     </h3>
-                    <p className="text-infrazen-gray">
+                    <p className="text-infrazeo-gray">
                       Tech Hub, 123 Innovation Street, San Francisco, CA 94103
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12">
-                <h3 className="text-xl font-semibold mb-4 text-infrazen-black">
+              <div className="mt-12 fade-in-element">
+                <h3 className="text-xl font-semibold mb-4 text-infrazeo-black font-poppins">
                   Connect with us
                 </h3>
                 <div className="flex space-x-4">
@@ -172,7 +184,7 @@ const ContactPage = () => {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-blue-100 p-3 rounded-full text-infrazen-blue hover:bg-blue-200 transition-colors"
+                    className="bg-blue-100 p-3 rounded-full text-infrazeo-blue hover:bg-blue-200 transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -185,8 +197,8 @@ const ContactPage = () => {
                     </svg>
                   </a>
                   <a
-                    href="mailto:contact@infrazen.com"
-                    className="bg-blue-100 p-3 rounded-full text-infrazen-blue hover:bg-blue-200 transition-colors"
+                    href="mailto:contact@infrazeo.com"
+                    className="bg-blue-100 p-3 rounded-full text-infrazeo-blue hover:bg-blue-200 transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -207,15 +219,15 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-6 text-infrazen-black">
+            <div className="bg-white p-8 rounded-xl shadow-md fade-in-element">
+              <h3 className="text-2xl font-bold mb-6 text-infrazeo-black font-poppins">
                 Send us a message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
                     htmlFor="fullName"
-                    className="block text-sm font-medium text-infrazen-black mb-1"
+                    className="block text-sm font-medium text-infrazeo-black mb-1"
                   >
                     Full Name
                   </label>
@@ -225,7 +237,7 @@ const ContactPage = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full border-gray-300"
+                    className="w-full border-gray-300 rounded-lg"
                     placeholder="John Doe"
                   />
                 </div>
@@ -233,7 +245,7 @@ const ContactPage = () => {
                 <div>
                   <label
                     htmlFor="companyName"
-                    className="block text-sm font-medium text-infrazen-black mb-1"
+                    className="block text-sm font-medium text-infrazeo-black mb-1"
                   >
                     Company Name
                   </label>
@@ -243,7 +255,7 @@ const ContactPage = () => {
                     value={formData.companyName}
                     onChange={handleChange}
                     required
-                    className="w-full border-gray-300"
+                    className="w-full border-gray-300 rounded-lg"
                     placeholder="Your Company Ltd."
                   />
                 </div>
@@ -251,7 +263,7 @@ const ContactPage = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-infrazen-black mb-1"
+                    className="block text-sm font-medium text-infrazeo-black mb-1"
                   >
                     Email
                   </label>
@@ -262,7 +274,7 @@ const ContactPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full border-gray-300"
+                    className="w-full border-gray-300 rounded-lg"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -270,7 +282,7 @@ const ContactPage = () => {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-infrazen-black mb-1"
+                    className="block text-sm font-medium text-infrazeo-black mb-1"
                   >
                     Phone
                   </label>
@@ -280,7 +292,7 @@ const ContactPage = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full border-gray-300"
+                    className="w-full border-gray-300 rounded-lg"
                     placeholder="+1 (234) 567-890"
                   />
                 </div>
@@ -288,7 +300,7 @@ const ContactPage = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-infrazen-black mb-1"
+                    className="block text-sm font-medium text-infrazeo-black mb-1"
                   >
                     Message
                   </label>
@@ -298,7 +310,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full border-gray-300"
+                    className="w-full border-gray-300 rounded-lg"
                     placeholder="Tell us about your requirements..."
                     rows={4}
                   />
@@ -306,7 +318,7 @@ const ContactPage = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-infrazen-blue hover:bg-blue-600"
+                  className="w-full bg-infrazeo-blue hover:bg-blue-600 rounded-full py-6 h-auto"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
@@ -322,7 +334,7 @@ const ContactPage = () => {
         href="https://wa.me/1234567890"
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
+        className="fixed bottom-6 left-6 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-40"
         aria-label="Contact via WhatsApp"
       >
         <svg
