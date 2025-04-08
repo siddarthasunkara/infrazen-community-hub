@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/5 rounded-full translate-x-1/3 translate-y-1/2 blur-3xl"></div>
       
-      <div className="container-custom relative">
+      <div className="container-custom relative fade-in-element">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-8 md:mb-0 group">
             <Link to="/" className="text-2xl font-bold font-poppins gradient-text bg-gradient-to-r from-blue-400 to-blue-600 inline-flex items-center">
@@ -41,14 +41,14 @@ const Footer = () => {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="text-gray-300 hover:text-white transition-all bg-gray-800 p-2 rounded-full hover:scale-110 hover:shadow-lg hover:bg-gray-700"
+                className="text-gray-300 hover:text-white transition-all bg-gray-800 p-2 rounded-full hover:scale-110 hover:shadow-lg hover:bg-gray-700 glow-on-hover"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a 
                 href="mailto:contact@infrazeo.com" 
-                className="text-gray-300 hover:text-white transition-all bg-gray-800 p-2 rounded-full hover:scale-110 hover:shadow-lg hover:bg-gray-700"
+                className="text-gray-300 hover:text-white transition-all bg-gray-800 p-2 rounded-full hover:scale-110 hover:shadow-lg hover:bg-gray-700 glow-on-hover"
                 aria-label="Email"
               >
                 <Mail size={20} />
