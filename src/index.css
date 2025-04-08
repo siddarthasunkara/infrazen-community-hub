@@ -121,10 +121,12 @@
   }
 
   .back-to-top {
-    @apply fixed bottom-6 right-6 bg-infrazeo-blue text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors z-40 opacity-0 invisible;
+    @apply fixed bottom-6 right-6 bg-infrazeo-blue text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors z-40 opacity-0;
+    visibility: hidden;
   }
 
   .back-to-top.visible {
-    @apply opacity-100 visible;
+    @apply opacity-100;
+    visibility: visible;
   }
 }
