@@ -11,7 +11,8 @@ interface CTAButtonProps {
 
 const CTAButton = ({ text, to, variant = "default", className = "" }: CTAButtonProps) => {
   return (
-    <Link to={to}>
+    <Link to={to} className="relative group">
+      <span className="absolute -inset-2 rounded-full bg-blue-500/20 scale-0 transition-all group-hover:scale-100 duration-300"></span>
       <Button 
         variant={variant} 
         className={`

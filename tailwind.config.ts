@@ -97,6 +97,22 @@ export default {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0)" },
         },
+        "rotate": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "bounce-subtle": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+        "scale": {
+          "0%": { transform: "scale(0.95)" },
+          "100%": { transform: "scale(1)" },
+        },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 5px rgba(0, 123, 255, 0.5)" },
+          "50%": { boxShadow: "0 0 20px rgba(0, 123, 255, 0.8)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -106,17 +122,26 @@ export default {
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
         "slide-in-right": "slide-in-right 0.5s ease-out forwards",
         "slide-in-left": "slide-in-left 0.5s ease-out forwards",
+        "rotate": "rotate 20s linear infinite",
+        "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
+        "scale": "scale 0.3s ease-out forwards",
+        "glow": "glow 2s ease-in-out infinite",
       },
       boxShadow: {
         'soft': '0 4px 12px rgba(0, 0, 0, 0.05)',
         'card': '0 10px 30px rgba(0, 0, 0, 0.08)',
         'button': '0 4px 14px rgba(0, 123, 255, 0.3)',
         'feature': '0 8px 24px rgba(0, 0, 0, 0.07)',
+        'hover': '0 15px 35px rgba(0, 123, 255, 0.1)',
+        'glass': '0 8px 32px rgba(0, 0, 0, 0.05)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-blue': 'linear-gradient(135deg, #007BFF 0%, #0056b3 100%)',
         'gradient-blue-light': 'linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%)',
+        'gradient-hero': 'linear-gradient(120deg, #1a75ff 0%, #0052cc 100%)',
+        'gradient-card': 'linear-gradient(145deg, #ffffff 0%, #f5f9ff 100%)',
+        'gradient-cta': 'linear-gradient(90deg, #0066cc 0%, #1a75ff 100%)',
       },
       transitionDuration: {
         '2000': '2000ms',

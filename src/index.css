@@ -121,10 +121,6 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .animate-fade-in {
-    @apply opacity-0 transition-all duration-700 ease-out;
-  }
-
   .fade-in-element {
     @apply translate-y-8 opacity-0 transition duration-700 ease-out;
   }
@@ -134,12 +130,13 @@
   }
 
   .back-to-top {
-    @apply fixed bottom-6 right-6 bg-infrazeo-blue text-white p-3 rounded-full shadow-lg hover:shadow-button hover:bg-blue-600 transition-all duration-300 z-40 opacity-0 transform hover:-translate-y-1;
+    @apply fixed bottom-6 right-6 bg-infrazeo-blue text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 z-40;
+    opacity: 0;
     visibility: hidden;
   }
 
   .back-to-top.visible {
-    @apply opacity-100;
+    opacity: 1;
     visibility: visible;
   }
   
@@ -186,5 +183,33 @@
   
   .whatsapp-float {
     @apply fixed bottom-6 left-6 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:-translate-y-1 z-40;
+  }
+  
+  .hero-shape {
+    @apply absolute w-32 h-32 md:w-64 md:h-64 rounded-full opacity-10 animate-pulse-soft;
+  }
+  
+  .scale-on-hover {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .card-3d {
+    @apply transition-all duration-300 hover:shadow-hover hover:-translate-y-2 hover:rotate-1;
+  }
+  
+  .button-glow {
+    @apply relative overflow-hidden;
+  }
+  
+  .button-glow::before {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full;
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
   }
 }

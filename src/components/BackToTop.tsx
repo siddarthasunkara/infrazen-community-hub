@@ -28,10 +28,13 @@ const BackToTop = () => {
   return (
     <button 
       onClick={scrollToTop}
-      className={`back-to-top ${isVisible ? 'visible' : ''}`}
+      className={`back-to-top ${isVisible ? 'visible' : ''} group`}
       aria-label="Back to top"
     >
-      <ArrowUp size={24} />
+      <ArrowUp 
+        size={24} 
+        className="group-hover:animate-bounce-subtle"
+      />
     </button>
   );
 };
