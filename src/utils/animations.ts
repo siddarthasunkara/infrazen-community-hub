@@ -88,3 +88,54 @@ export const setupStaggeredEntrance = () => {
     });
   });
 };
+
+// Add floating animation to 3D elements
+export const setupFloatingElements = () => {
+  const floatingElements = document.querySelectorAll('.floating');
+  
+  floatingElements.forEach((el, index) => {
+    const element = el as HTMLElement;
+    // Set different animation delays to create an organic feeling
+    element.style.animationDelay = `${index * 300}ms`;
+  });
+};
+
+// Add ripple effect to buttons
+export const setupRippleEffect = () => {
+  const buttons = document.querySelectorAll('.ripple-effect');
+  
+  buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const rect = (button as HTMLElement).getBoundingClientRect();
+      const x = (e as MouseEvent).clientX - rect.left; 
+      const y = (e as MouseEvent).clientY - rect.top;
+      
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      
+      button.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
+  });
+};
+
+// Initialize all animations
+export const initializeAllAnimations = () => {
+  const observer = observeElements();
+  handleBackToTop();
+  setupParallaxEffect();
+  setupStaggeredEntrance();
+  setupFloatingElements();
+  setupRippleEffect();
+  
+  return () => {
+    if (observer) {
+      observer.disconnect();
+    }
+  };
+};
