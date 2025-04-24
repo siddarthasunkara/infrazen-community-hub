@@ -165,7 +165,7 @@ const HomePage = () => {
                   <p className="text-infrazeo-gray">Continue what you do best - creating exceptional living spaces and fostering community growth.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-8 md:pl-12 fade-in-element">
-                  <img src="/placeholder.svg" alt="Building communities" className="rounded-lg w-full shadow-md" />
+                  <img src="/pic1.jpg" alt="Building communities" className="rounded-lg w-full shadow-md" />
                 </div>
               </div>
 
