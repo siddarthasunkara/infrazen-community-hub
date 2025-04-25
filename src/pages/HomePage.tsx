@@ -58,8 +58,8 @@ const HomePage = () => {
                   <div className="bg-blue-50 rounded-2xl p-4">
                     <img 
                       src="/home1.jpg" 
-                      alt="App Interface" 
-                      className="w-full rounded-xl"
+                      alt="App" 
+                      className="w-[90%] md:w-[85%] lg:w-[80%] object-cover rounded-xl"
                     />
                     <div className="mt-4 p-2">
                       <div className="h-6 bg-gray-200 rounded-full w-3/4 mb-2"></div>
