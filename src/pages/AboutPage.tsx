@@ -47,7 +47,7 @@ const AboutPage = () => {
             </div>
             <div className="bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
               <img 
-                src="/placeholder.svg" 
+                src="/ourmission.jpg" 
                 alt="Our Mission" 
                 className="w-full rounded-lg"
               />
@@ -57,7 +57,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-20">
             <div className="order-2 md:order-1 bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
               <img 
-                src="/placeholder.svg" 
+                src="/ourapproach.jpg" 
                 alt="Our Approach" 
                 className="w-full rounded-lg"
               />
