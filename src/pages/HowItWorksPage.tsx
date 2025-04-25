@@ -66,7 +66,7 @@ const HowItWorksPage = () => {
                 </div>
                 <div className="bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
                   <img 
-                    src="/placeholder.svg" 
+                    src="/step11.jpg" 
                     alt="Developer Signup Process" 
                     className="w-full rounded-lg"
                   />
@@ -85,7 +85,7 @@ const HowItWorksPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
                   <img 
-                    src="/placeholder.svg" 
+                    src="/step2.jpg" 
                     alt="Admin Onboarding" 
                     className="w-full rounded-lg"
                   />
@@ -146,7 +146,7 @@ const HowItWorksPage = () => {
                 </div>
                 <div className="bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
                   <img 
-                    src="/placeholder.svg" 
+                    src="/step3.jpg" 
                     alt="Resident App Usage" 
                     className="w-full rounded-lg"
                   />
