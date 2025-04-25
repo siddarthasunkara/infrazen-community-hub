@@ -58,7 +58,7 @@ const HomePage = () => {
                       <img 
                         src="/home1.jpg" 
                         alt="App" 
-                        className="w-full h-full object-cover"
+                        className="w-full h-auto object-cover"
                       />
                     </div>
                   </div>
