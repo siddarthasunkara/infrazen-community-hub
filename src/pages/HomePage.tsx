@@ -54,13 +54,19 @@ const HomePage = () => {
             </div>
                 <div className="hidden lg:block fade-in-element">
                   <div className="relative mx-auto max-w-sm">
-                    <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    {/* Background Card */}
+                    <div className="bg-white rounded-3xl shadow-xl overflow-hidden relative z-10">
                       <img 
                         src="/home1.jpg" 
                         alt="App" 
-                        className="w-full h-auto object-cover"
+                        className="w-full h-full object-cover"
                       />
                     </div>
+                
+                    {/* Decorative circles - pulled OUT of the card */}
+                    <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-blue-400 rounded-full opacity-50 z-0"></div>
+                    <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-300 rounded-full opacity-40 z-0"></div>
+                    <div className="absolute top-1/2 right-[-50px] w-16 h-16 bg-blue-500 rounded-full opacity-30 z-0"></div>
                   </div>
                 </div>
                 {/* Decorative elements */}
