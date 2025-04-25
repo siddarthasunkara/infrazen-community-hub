@@ -103,7 +103,7 @@ const ContactPage = () => {
                       Email Us
                     </h3>
                     <a
-                      href="mailto:contact@infrazeo.com"
+                      href="mailto:hello@infrazeo.com"
                       className="text-infrazeo-blue hover:underline"
                     >
                       contact@infrazeo.com
@@ -133,10 +133,10 @@ const ContactPage = () => {
                       Call Us
                     </h3>
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+919063625533"
                       className="text-infrazeo-blue hover:underline"
                     >
-                      +1 (234) 567-890
+                      +919063625533
                     </a>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ const ContactPage = () => {
                       Location
                     </h3>
                     <p className="text-infrazeo-gray">
-                      Tech Hub, 123 Innovation Street, San Francisco, CA 94103
+                      Vijaywada,Andhra Pradesh, India
                     </p>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ const ContactPage = () => {
                 </h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/infrazeo/"
                     target="_blank"
                     rel="noreferrer"
                     className="bg-blue-100 p-3 rounded-full text-infrazeo-blue hover:bg-blue-200 transition-colors"
@@ -197,7 +197,7 @@ const ContactPage = () => {
                     </svg>
                   </a>
                   <a
-                    href="mailto:contact@infrazeo.com"
+                    href="mailto:hello@infrazeo.com"
                     className="bg-blue-100 p-3 rounded-full text-infrazeo-blue hover:bg-blue-200 transition-colors"
                   >
                     <svg
