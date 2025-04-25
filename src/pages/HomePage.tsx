@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -52,27 +51,20 @@ const HomePage = () => {
                 </Link>
               </div>
             </div>
-                <div className="hidden lg:block fade-in-element">
-                  <div className="relative mx-auto max-w-sm">
-                    {/* Background Card */}
-                    <div className="bg-white rounded-3xl shadow-xl overflow-hidden relative z-10">
-                      <img 
-                        src="/home1.jpg" 
-                        alt="App" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                
-                    {/* Decorative circles - pulled OUT of the card */}
-                    <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-blue-400 rounded-full opacity-50 z-0"></div>
-                    <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-300 rounded-full opacity-40 z-0"></div>
-                    <div className="absolute top-1/2 right-[-50px] w-16 h-16 bg-blue-500 rounded-full opacity-30 z-0"></div>
-                  </div>
+            <div className="hidden lg:block fade-in-element">
+              <div className="relative mx-auto max-w-sm">
+                {/* Background Card */}
+                <div className="bg-white rounded-3xl shadow-xl overflow-hidden relative z-10">
+                  <img 
+                    src="/home1.jpg" 
+                    alt="App" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                {/* Decorative elements */}
-                <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-blue-400 rounded-full opacity-50"></div>
-                <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-300 rounded-full opacity-40"></div>
-                <div className="absolute top-1/2 right-[-50px] w-16 h-16 bg-blue-500 rounded-full opacity-30"></div>
+                {/* Decorative circles - pulled OUT of the card */}
+                <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-blue-400 rounded-full opacity-50 z-0"></div>
+                <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-300 rounded-full opacity-40 z-0"></div>
+                <div className="absolute top-1/2 right-[-50px] w-16 h-16 bg-blue-500 rounded-full opacity-30 z-0"></div>
               </div>
             </div>
           </div>
@@ -94,7 +86,8 @@ const HomePage = () => {
                 <Tag className="text-infrazeo-blue h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-infrazeo-black font-poppins">Custom Branding</h3>
-              <p className="text-infrazeo-gray">Your identity, your experience. Maintain brand consistency across all digital touchpoints.</p>
+              <p className="text-infrazeo-gray">Your identity, your experience. Maintain brand consistency across all digital touchpoints.</ ```javascript
+            </p>
             </div>
 
             {/* Feature Card 2 */}
@@ -166,8 +159,7 @@ const HomePage = () => {
                   <h3 className="text-2xl font-bold mt-2 mb-4 text-infrazeo-black font-poppins">You build the community</h3>
                   <p className="text-infrazeo-gray">Continue what you do best - creating exceptional living spaces and fostering community growth.</p>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-8 md:pl-12 fade-in-element">
-                  <img src="/pic1.jpg" alt="Building communities" className="rounded-lg w-full shadow-md" />
+                <div className="bg-gray-50 rounded-lg p-8 md:pl-12 fade-in-element <img src="/pic1.jpg" alt="Building communities" className="rounded-lg w-full shadow-md" />
                 </div>
               </div>
 
@@ -229,7 +221,7 @@ const HomePage = () => {
             </div>
 
             {/* Reason 4 */}
-            <div className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all hover:translate-y-[-5px] fade-in-element text-center">
+            <div className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all hover:translate-y- [-5px] fade-in-element text-center">
               <h3 className="text-xl font-semibold mb-3 text-infrazeo-black font-poppins">White-label, tailored design</h3>
               <p className="text-infrazeo-gray">Tailored implementation to match your specific community requirements.</p>
             </div>
