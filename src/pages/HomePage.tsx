@@ -57,7 +57,7 @@ const HomePage = () => {
                 <div className="bg-white p-6 rounded-3xl shadow-xl">
                   <div className="bg-blue-50 rounded-2xl p-4">
                     <img 
-                      src="/placeholder.svg" 
+                      src="/home1.jpg" 
                       alt="App Interface" 
                       className="w-full rounded-xl"
                     />
@@ -172,7 +172,7 @@ const HomePage = () => {
               {/* Step 2 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="order-2 md:order-1 bg-gray-50 rounded-lg p-8 md:pr-12 fade-in-element">
-                  <img src="/placeholder.svg" alt="Digital solution" className="rounded-lg w-full shadow-md" />
+                  <img src="/step2.jpg" alt="Digital solution" className="rounded-lg w-full shadow-md" />
                 </div>
                 <div className="order-1 md:order-2 md:pl-12 fade-in-element">
                   <div className="hidden md:block absolute left-1/2 w-6 h-6 rounded-full bg-infrazeo-blue transform -translate-x-1/2"></div>
@@ -191,7 +191,7 @@ const HomePage = () => {
                   <p className="text-infrazeo-gray">Residents benefit from an intuitive digital platform that enhances their community experience.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-8 md:pl-12 fade-in-element">
-                  <img src="/placeholder.svg" alt="Resident experience" className="rounded-lg w-full shadow-md" />
+                  <img src="/step33.jpg" alt="Resident experience" className="rounded-lg w-full shadow-md" />
                 </div>
               </div>
             </div>
