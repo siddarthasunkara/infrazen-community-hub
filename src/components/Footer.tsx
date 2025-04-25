@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Phone } from "lucide-react"; // Import the Phone icon
 
 const Footer = () => {
   return (
@@ -32,7 +31,7 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/infrazeo/" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-gray-300 hover:text-white transition-colors bg-gray-800 p-2 rounded-full hover-lift"
@@ -41,11 +40,18 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="mailto:contact@infrazeo.com" 
+                href="mailto:hello@infrazeo.com" 
                 className="text-gray-300 hover:text-white transition-colors bg-gray-800 p-2 rounded-full hover-lift"
                 aria-label="Email"
               >
                 <Mail size={20} />
+              </a>
+              <a 
+                href="tel:+919063625533"  // Link to the mobile number
+                className="text-gray-300 hover:text-white transition-colors bg-gray-800 p-2 rounded-full hover-lift"
+                aria-label="Phone"
+              >
+                <Phone size={20} />
               </a>
             </div>
           </div>
