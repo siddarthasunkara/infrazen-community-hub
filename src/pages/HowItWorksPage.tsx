@@ -66,7 +66,7 @@ const HowItWorksPage = () => {
                 </div>
                 <div className="bg-gray-50 p-8 rounded-xl shadow-md fade-in-element">
                   <img 
-                    src="/step11.jpg" 
+                    src="/new.jpg" 
                     alt="Developer Signup Process" 
                     className="w-full rounded-lg"
                   />
