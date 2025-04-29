@@ -9,6 +9,10 @@
     {
       "src": "/(.*)",
       "dest": "/dist/index.html"
+    },
+    {
+      "src": "/(.*)", 
+      "dest": "/index.html" 
     }
   ]
 }
