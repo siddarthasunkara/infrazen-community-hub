@@ -35,26 +35,6 @@ const ContactPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Form submitted successfully!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      setFormData({
-        fullName: "",
-        companyName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-      setIsSubmitting(false);
-    }, 1500);
-  };
 
   return (
     <div>
@@ -103,7 +83,7 @@ const ContactPage = () => {
                       Email Us
                     </h3>
                     <a
-                      href="mailto:hello@infrazeo.com"
+                      href="mailto:contact@infrazeo.com"
                       className="text-infrazeo-blue hover:underline"
                     >
                       contact@infrazeo.com
@@ -223,7 +203,7 @@ const ContactPage = () => {
               <h3 className="text-2xl font-bold mb-6 text-infrazeo-black font-poppins">
                 Send us a message
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formspree.io/f/mgykokjz" method="POST" className="space-y-6">
                 <div>
                   <label
                     htmlFor="fullName"
@@ -233,7 +213,7 @@ const ContactPage = () => {
                   </label>
                   <Input
                     id="fullName"
-                    name="fullName"
+                    name="fullName" // 👈 ADD THIS
                     value={formData.fullName}
                     onChange={handleChange}
                     required
@@ -251,7 +231,7 @@ const ContactPage = () => {
                   </label>
                   <Input
                     id="companyName"
-                    name="companyName"
+                    name="companyName" // 👈 ADD THIS
                     value={formData.companyName}
                     onChange={handleChange}
                     required
@@ -269,7 +249,7 @@ const ContactPage = () => {
                   </label>
                   <Input
                     id="email"
-                    name="email"
+                    name="email" // 👈 ADD THIS
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -288,7 +268,7 @@ const ContactPage = () => {
                   </label>
                   <Input
                     id="phone"
-                    name="phone"
+                    name="phone" // 👈 ADD THIS
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
@@ -306,7 +286,7 @@ const ContactPage = () => {
                   </label>
                   <Textarea
                     id="message"
-                    name="message"
+                    name="message" // 👈 ADD THIS
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -319,7 +299,6 @@ const ContactPage = () => {
                 <Button
                   type="submit"
                   className="w-full bg-infrazeo-blue hover:bg-blue-600 rounded-full py-6 h-auto"
-                  disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
