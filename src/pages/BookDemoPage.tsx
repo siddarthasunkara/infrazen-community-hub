@@ -36,27 +36,6 @@ const BookDemoPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Demo request submitted!",
-        description: "Our team will contact you to confirm your demo appointment.",
-      });
-      setFormData({
-        fullName: "",
-        companyName: "",
-        email: "",
-        phone: "",
-        message: "",
-        preferredDate: "",
-      });
-      setIsSubmitting(false);
-    }, 1500);
-  };
 
   return (
     <div>
@@ -145,7 +124,7 @@ const BookDemoPage = () => {
               <h3 className="text-2xl font-bold mb-6 text-infrazeo-black font-poppins">
                 Schedule Your Demo
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formspree.io/f/xjkwgrbz" method="POST" className="space-y-6">
                 <div>
                   <label
                     htmlFor="fullName"
@@ -258,7 +237,6 @@ const BookDemoPage = () => {
                 <Button
                   type="submit"
                   className="w-full bg-infrazeo-blue hover:bg-blue-600 rounded-full py-6 h-auto text-lg"
-                  disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Book Your Demo"}
                 </Button>
