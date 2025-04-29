@@ -177,7 +177,7 @@ const ContactPage = () => {
                     </svg>
                   </a>
                   <a
-                    href="mailto:hello@infrazeo.com"
+                    href="mailto:contact@infrazeo.com"
                     className="bg-blue-100 p-3 rounded-full text-infrazeo-blue hover:bg-blue-200 transition-colors"
                   >
                     <svg
@@ -203,7 +203,7 @@ const ContactPage = () => {
               <h3 className="text-2xl font-bold mb-6 text-infrazeo-black font-poppins">
                 Send us a message
               </h3>
-                <form action="https://formspree.io/f/mgykokjz" method="POST" className="space-y-6">
+                <form action="https://formspree.io/f/mgvkokjz" method="POST" className="space-y-6">
                 <div>
                   <label
                     htmlFor="fullName"
