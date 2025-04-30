@@ -20,7 +20,7 @@ const Layout = () => {
       <Footer />
       <BackToTop />
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/919063625533"
         target="_blank"
         rel="noreferrer"
         className="whatsapp-float"
