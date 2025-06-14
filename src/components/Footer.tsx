@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-8 md:mb-0">
             <Link to="/" className="text-2xl font-bold font-poppins gradient-text bg-gradient-to-r from-blue-400 to-blue-600">
-              InfraZeo
+              InfraZeo Technologies
             </Link>
             <p className="text-gray-400 mt-2 text-sm">Infrastructure Meets Innovation</p>
           </div>
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          © 2025 InfraZeo. All rights reserved.
+          © 2025 InfraZeo Technologies. All rights reserved.
         </div>
       </div>
     </footer>
