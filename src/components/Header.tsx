@@ -40,7 +40,7 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-white text-2xl font-bold font-poppins flex items-center">
-            <span>InfraZeo</span>
+            <span>InfraZeo Technologies</span>
           </Link>
 
           {/* Desktop Navigation */}
